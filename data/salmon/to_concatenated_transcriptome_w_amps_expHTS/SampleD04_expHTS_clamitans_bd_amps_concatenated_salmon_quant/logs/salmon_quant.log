@@ -1,0 +1,31 @@
+[2016-08-14 11:48:30.062] [jointLog] [info] parsing read library format
+[2016-08-14 11:48:31.457] [jointLog] [info] Loading Quasi index
+[2016-08-14 11:48:51.304] [jointLog] [info] done
+[2016-08-14 11:49:31.970] [fileLog] [info] 
+At end of round 0
+==================
+Observed 1306322 total fragments (1306322 in most recent round)
+
+[2016-08-14 11:49:31.969] [jointLog] [info] Computed 61992 rich equivalence classes for further processing
+[2016-08-14 11:49:31.969] [jointLog] [info] Counted 975677 total reads in the equivalence classes 
+[2016-08-14 11:49:35.389] [jointLog] [warning] Only 975677 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2016-08-14 11:49:35.389] [jointLog] [info] Mapping rate = 74.6889%
+
+[2016-08-14 11:49:35.389] [jointLog] [info] finished quantifyLibrary()
+[2016-08-14 11:49:35.389] [jointLog] [info] Starting optimizer
+[2016-08-14 11:49:35.428] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-08-14 11:49:35.431] [jointLog] [info] iteration = 0 | max rel diff. = 57.602
+[2016-08-14 11:49:35.584] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-08-14 11:49:36.409] [jointLog] [info] iteration = 100 | max rel diff. = 0.0675891
+[2016-08-14 11:49:36.686] [jointLog] [info] iteration = 200 | max rel diff. = 0.0232294
+[2016-08-14 11:49:36.964] [jointLog] [info] iteration = 300 | max rel diff. = 0.0147162
+[2016-08-14 11:49:37.005] [jointLog] [info] iteration = 317 | max rel diff. = 0.00922285
+[2016-08-14 11:49:37.008] [jointLog] [info] Finished optimizer
+[2016-08-14 11:49:37.008] [jointLog] [info] writing output 
+
+[2016-08-14 11:49:37.140] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleD04/SampleD04_R2.fastq )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleD04_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

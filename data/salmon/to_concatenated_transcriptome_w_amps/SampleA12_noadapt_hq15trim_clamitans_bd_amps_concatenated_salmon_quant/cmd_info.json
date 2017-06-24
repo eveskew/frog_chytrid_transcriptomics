@@ -1,0 +1,11 @@
+{
+    "salmon_version": "0.6.0",
+    "biasCorrect": [],
+    "extraSensitive": [],
+    "threads": "4",
+    "index": "../../../ref_seqs/transcriptomes/clamitans_bd_amps_concatenated_transcriptome_salmon_index_21kmer",
+    "libType": "IU",
+    "mates1": "/dev/fd/63",
+    "mates2": "/dev/fd/62",
+    "output": "SampleA12_noadapt_hq15trim_clamitans_bd_amps_concatenated_salmon_quant"
+}

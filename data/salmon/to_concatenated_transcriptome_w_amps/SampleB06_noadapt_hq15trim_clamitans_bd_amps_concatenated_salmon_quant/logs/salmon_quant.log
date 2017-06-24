@@ -1,0 +1,38 @@
+[2016-07-22 20:20:43.398] [jointLog] [info] parsing read library format
+[2016-07-22 20:20:43.534] [jointLog] [info] Loading Quasi index
+[2016-07-22 20:20:47.629] [jointLog] [info] done
+[2016-07-22 20:37:06.389] [fileLog] [info] 
+At end of round 0
+==================
+Observed 37580463 total fragments (37580463 in most recent round)
+
+[2016-07-22 20:37:06.387] [jointLog] [info] Computed 321566 rich equivalence classes for further processing
+[2016-07-22 20:37:06.387] [jointLog] [info] Counted 28269542 total reads in the equivalence classes 
+[2016-07-22 20:37:06.391] [jointLog] [info] Mapping rate = 75.224%
+
+[2016-07-22 20:37:06.391] [jointLog] [info] finished quantifyLibrary()
+[2016-07-22 20:37:06.391] [jointLog] [info] Starting optimizer
+[2016-07-22 20:37:06.511] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-07-22 20:37:06.555] [jointLog] [info] iteration = 0 | max rel diff. = 34.79
+[2016-07-22 20:37:08.672] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-07-22 20:37:12.273] [jointLog] [info] iteration = 100 | max rel diff. = 0.228099
+[2016-07-22 20:37:16.580] [jointLog] [info] iteration = 200 | max rel diff. = 0.108639
+[2016-07-22 20:37:20.894] [jointLog] [info] iteration = 300 | max rel diff. = 0.115041
+[2016-07-22 20:37:25.210] [jointLog] [info] iteration = 400 | max rel diff. = 0.0629758
+[2016-07-22 20:37:29.470] [jointLog] [info] iteration 500, recomputing effective lengths
+[2016-07-22 20:37:30.914] [jointLog] [info] iteration = 500 | max rel diff. = 0.0298761
+[2016-07-22 20:37:35.227] [jointLog] [info] iteration = 600 | max rel diff. = 0.0379987
+[2016-07-22 20:37:39.518] [jointLog] [info] iteration = 700 | max rel diff. = 0.0218086
+[2016-07-22 20:37:43.835] [jointLog] [info] iteration = 800 | max rel diff. = 0.0199797
+[2016-07-22 20:37:48.140] [jointLog] [info] iteration = 900 | max rel diff. = 0.0101592
+[2016-07-22 20:37:52.390] [jointLog] [info] iteration 1000, recomputing effective lengths
+[2016-07-22 20:37:53.829] [jointLog] [info] iteration = 1000 | max rel diff. = 0.0101365
+[2016-07-22 20:37:58.138] [jointLog] [info] iteration = 1100 | max rel diff. = 0.0100737
+[2016-07-22 20:38:00.557] [jointLog] [info] iteration = 1157 | max rel diff. = 0.00999888
+[2016-07-22 20:38:00.562] [jointLog] [info] Finished optimizer
+[2016-07-22 20:38:00.562] [jointLog] [info] writing output 
+
+[2016-07-22 20:38:00.711] [jointLog] [warning] NOTE: Read Lib [( /dev/fd/63, /dev/fd/62 )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleB06_noadapt_hq15trim_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

@@ -1,0 +1,36 @@
+[2016-08-14 13:36:44.332] [jointLog] [info] parsing read library format
+[2016-08-14 13:36:45.626] [jointLog] [info] Loading Quasi index
+[2016-08-14 13:37:04.652] [jointLog] [info] done
+[2016-08-14 13:39:54.455] [fileLog] [info] 
+At end of round 0
+==================
+Observed 6422390 total fragments (6422390 in most recent round)
+
+[2016-08-14 13:39:54.454] [jointLog] [info] Computed 249546 rich equivalence classes for further processing
+[2016-08-14 13:39:54.454] [jointLog] [info] Counted 4902752 total reads in the equivalence classes 
+[2016-08-14 13:39:57.152] [jointLog] [warning] Only 4902752 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2016-08-14 13:39:57.152] [jointLog] [info] Mapping rate = 76.3384%
+
+[2016-08-14 13:39:57.152] [jointLog] [info] finished quantifyLibrary()
+[2016-08-14 13:39:57.152] [jointLog] [info] Starting optimizer
+[2016-08-14 13:39:57.207] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-08-14 13:39:57.218] [jointLog] [info] iteration = 0 | max rel diff. = 9.0212
+[2016-08-14 13:39:57.723] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-08-14 13:39:58.954] [jointLog] [info] iteration = 100 | max rel diff. = 0.159088
+[2016-08-14 13:39:59.972] [jointLog] [info] iteration = 200 | max rel diff. = 0.0765168
+[2016-08-14 13:40:00.983] [jointLog] [info] iteration = 300 | max rel diff. = 0.0579501
+[2016-08-14 13:40:01.996] [jointLog] [info] iteration = 400 | max rel diff. = 0.024292
+[2016-08-14 13:40:02.274] [jointLog] [info] iteration = 428 | max rel diff. = 0.00998373
+[2016-08-14 13:40:02.276] [jointLog] [info] Finished optimizer
+[2016-08-14 13:40:02.276] [jointLog] [info] writing output 
+
+[2016-08-14 13:40:02.397] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleF09/SampleF09_R2.fastq )] :
+
+Detected a strand bias > 1% in an unstranded protocol check the file: SampleF09_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+
+[2016-08-14 13:40:02.397] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleF09/SampleF09_R2.fastq )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleF09_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

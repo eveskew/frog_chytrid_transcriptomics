@@ -1,0 +1,38 @@
+[2016-08-14 10:21:40.156] [jointLog] [info] parsing read library format
+[2016-08-14 10:21:41.625] [jointLog] [info] Loading Quasi index
+[2016-08-14 10:22:01.903] [jointLog] [info] done
+[2016-08-14 10:24:43.819] [jointLog] [info] Computed 212632 rich equivalence classes for further processing
+[2016-08-14 10:24:43.819] [jointLog] [info] Counted 4413989 total reads in the equivalence classes 
+[2016-08-14 10:24:43.820] [fileLog] [info] 
+At end of round 0
+==================
+Observed 5882846 total fragments (5882846 in most recent round)
+
+[2016-08-14 10:24:47.075] [jointLog] [warning] Only 4413989 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2016-08-14 10:24:47.075] [jointLog] [info] Mapping rate = 75.0315%
+
+[2016-08-14 10:24:47.075] [jointLog] [info] finished quantifyLibrary()
+[2016-08-14 10:24:47.075] [jointLog] [info] Starting optimizer
+[2016-08-14 10:24:47.134] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-08-14 10:24:47.146] [jointLog] [info] iteration = 0 | max rel diff. = 47.9399
+[2016-08-14 10:24:47.649] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-08-14 10:24:48.985] [jointLog] [info] iteration = 100 | max rel diff. = 0.130508
+[2016-08-14 10:24:49.969] [jointLog] [info] iteration = 200 | max rel diff. = 0.07551
+[2016-08-14 10:24:50.945] [jointLog] [info] iteration = 300 | max rel diff. = 0.0461332
+[2016-08-14 10:24:51.922] [jointLog] [info] iteration = 400 | max rel diff. = 0.0310961
+[2016-08-14 10:24:52.890] [jointLog] [info] iteration 500, recomputing effective lengths
+[2016-08-14 10:24:53.715] [jointLog] [info] iteration = 500 | max rel diff. = 0.0178736
+[2016-08-14 10:24:54.039] [jointLog] [info] iteration = 533 | max rel diff. = 0.009866
+[2016-08-14 10:24:54.041] [jointLog] [info] Finished optimizer
+[2016-08-14 10:24:54.041] [jointLog] [info] writing output 
+
+[2016-08-14 10:24:54.184] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleB04/SampleB04_R2.fastq )] :
+
+Detected a strand bias > 1% in an unstranded protocol check the file: SampleB04_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+
+[2016-08-14 10:24:54.184] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleB04/SampleB04_R2.fastq )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleB04_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

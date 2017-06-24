@@ -1,0 +1,33 @@
+[2016-08-14 14:07:42.609] [jointLog] [info] parsing read library format
+[2016-08-14 14:07:44.021] [jointLog] [info] Loading Quasi index
+[2016-08-14 14:08:02.784] [jointLog] [info] done
+[2016-08-14 14:11:18.871] [jointLog] [info] Computed 331370 rich equivalence classes for further processing
+[2016-08-14 14:11:18.871] [jointLog] [info] Counted 6481229 total reads in the equivalence classes 
+[2016-08-14 14:11:18.874] [jointLog] [info] Mapping rate = 78.6819%
+
+[2016-08-14 14:11:18.874] [jointLog] [info] finished quantifyLibrary()
+[2016-08-14 14:11:18.874] [jointLog] [info] Starting optimizer
+[2016-08-14 14:11:18.871] [fileLog] [info] 
+At end of round 0
+==================
+Observed 8237255 total fragments (8237255 in most recent round)
+
+[2016-08-14 14:11:18.953] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-08-14 14:11:18.972] [jointLog] [info] iteration = 0 | max rel diff. = 9.30759
+[2016-08-14 14:11:19.755] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-08-14 14:11:21.414] [jointLog] [info] iteration = 100 | max rel diff. = 0.172556
+[2016-08-14 14:11:23.004] [jointLog] [info] iteration = 200 | max rel diff. = 0.0977129
+[2016-08-14 14:11:24.473] [jointLog] [info] iteration = 300 | max rel diff. = 0.0536017
+[2016-08-14 14:11:25.949] [jointLog] [info] iteration = 400 | max rel diff. = 0.0128434
+[2016-08-14 14:11:26.845] [jointLog] [info] iteration = 462 | max rel diff. = 0.00998239
+[2016-08-14 14:11:26.847] [jointLog] [info] Finished optimizer
+[2016-08-14 14:11:26.847] [jointLog] [info] writing output 
+
+[2016-08-14 14:11:26.989] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleG03/SampleG03_R2.fastq )] :
+
+Detected a strand bias > 1% in an unstranded protocol check the file: SampleG03_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+
+[2016-08-14 14:11:26.989] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleG03/SampleG03_R2.fastq )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleG03_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

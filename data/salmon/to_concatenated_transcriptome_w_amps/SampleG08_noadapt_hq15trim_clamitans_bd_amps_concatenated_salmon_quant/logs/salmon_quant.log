@@ -1,0 +1,29 @@
+[2016-07-23 18:12:22.545] [jointLog] [info] parsing read library format
+[2016-07-23 18:12:26.082] [jointLog] [info] Loading Quasi index
+[2016-07-23 18:13:23.185] [jointLog] [info] done
+[2016-07-23 18:29:47.174] [fileLog] [info] 
+At end of round 0
+==================
+Observed 39785618 total fragments (39785618 in most recent round)
+
+[2016-07-23 18:29:47.173] [jointLog] [info] Computed 410140 rich equivalence classes for further processing
+[2016-07-23 18:29:47.173] [jointLog] [info] Counted 27837841 total reads in the equivalence classes 
+[2016-07-23 18:29:47.176] [jointLog] [info] Mapping rate = 69.9696%
+
+[2016-07-23 18:29:47.176] [jointLog] [info] finished quantifyLibrary()
+[2016-07-23 18:29:47.176] [jointLog] [info] Starting optimizer
+[2016-07-23 18:29:47.276] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-07-23 18:29:47.316] [jointLog] [info] iteration = 0 | max rel diff. = 12.7828
+[2016-07-23 18:29:49.257] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-07-23 18:29:52.513] [jointLog] [info] iteration = 100 | max rel diff. = 0.182523
+[2016-07-23 18:29:56.549] [jointLog] [info] iteration = 200 | max rel diff. = 0.0865186
+[2016-07-23 18:30:00.319] [jointLog] [info] iteration = 300 | max rel diff. = 0.0314552
+[2016-07-23 18:30:04.079] [jointLog] [info] iteration = 400 | max rel diff. = 0.0702765
+[2016-07-23 18:30:05.361] [jointLog] [info] iteration = 435 | max rel diff. = 0.00926723
+[2016-07-23 18:30:05.371] [jointLog] [info] Finished optimizer
+[2016-07-23 18:30:05.371] [jointLog] [info] writing output 
+
+[2016-07-23 18:30:05.506] [jointLog] [warning] NOTE: Read Lib [( /dev/fd/63, /dev/fd/62 )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleG08_noadapt_hq15trim_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

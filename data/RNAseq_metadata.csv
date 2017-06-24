@@ -1,0 +1,111 @@
+Species,ID,Well,Treatment,DayOfExposure,DayOfMortality,DayOfSacrifice,RawBdLoad,AdjustedBdLoad,HistoScore,Date of RNA Extraction
+Wood Frog,2,A01,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Wood Frog,6,A02,Carter,10/20/14,10/27/14,7,0.96,153.6,0,5/14/15
+Wood Frog,8,A03,SectionLine,10/13/14,10/23/14,10,1.696667,271.46672,8.55,5/13/15
+Wood Frog,10,A04,SectionLine,10/13/14,10/20/14,7,18.23,2916.8,135.75,5/8/15
+Wood Frog,12,A05,Carter,10/20/14,10/30/14,10,0.57,91.2,6.67,5/17/15
+Wood Frog,14,A06,Control,10/13/14,10/16/14,3,0,0,0,5/3/15
+Wood Frog,15,A07,Control,10/13/14,10/20/14,7,0,0,0,5/8/15
+Wood Frog,18,A08,Control,10/13/14,10/16/14,3,0,0,0,5/3/15
+Wood Frog,20,A09,Carter,10/20/14,10/30/14,10,1.01,161.6,3.37,5/17/15
+Wood Frog,21,A10,Carter,10/20/14,10/23/14,3,0.166667,26.66672,,5/14/15
+Wood Frog,23,A11,Control,10/13/14,10/23/14,10,2.25,360,0,5/14/15
+Wood Frog,24,A12,SectionLine,10/13/14,10/16/14,3,2.67,427.2,140.19,5/6/15
+Wood Frog,27,B01,Control,10/13/14,10/16/14,3,0,0,,5/3/15
+Wood Frog,31,B02,Carter,10/20/14,10/23/14,3,0.646667,103.46672,0,5/14/15
+Wood Frog,40,B03,SectionLine,10/13/14,10/20/14,7,4.43,708.8,72.18,5/8/15
+Wood Frog,44,B04,Control,10/13/14,10/16/14,3,0,0,,5/6/15
+Wood Frog,47,B05,SectionLine,10/13/14,10/16/14,3,0.13,20.8,85.46,5/6/15
+Wood Frog,48,B06,SectionLine,10/13/14,10/16/14,3,0,0,67.37,5/6/15
+Wood Frog,50,B07,Control,10/13/14,10/23/14,10,0.7933333,126.933328,0,5/14/15
+Wood Frog,51,B08,Control,10/13/14,10/20/14,7,0,0,0,5/8/15
+Wood Frog,53,B09,SectionLine,10/13/14,10/16/14,3,6.28,1004.8,,5/6/15
+Wood Frog,56,B10,Carter,10/20/14,10/27/14,7,0,0,0,5/14/15
+Wood Frog,57,B11,Carter,10/20/14,10/27/14,7,0,0,0,5/14/15
+Wood Frog,61,B12,PreviouslyExposedSectionLine,10/13/14,10/16/14,3,0.89,142.4,,5/6/15
+Wood Frog,63,C01,Carter,10/20/14,10/23/14,3,0.203333,32.53328,6.06,5/14/15
+Wood Frog,65,C02,Carter,10/20/14,10/23/14,3,0.43,68.8,5.45,5/14/15
+Wood Frog,69,C03,Carter,10/20/14,10/30/14,10,1.03,164.8,0,5/17/15
+Wood Frog,74,C04,Control,10/13/14,10/20/14,7,0,0,0,5/8/15
+Wood Frog,76,C05,Carter,10/20/14,10/30/14,10,3.9,624,0,5/17/15
+Wood Frog,79,C06,SectionLine,10/13/14,10/23/14,10,0.92,147.2,,5/13/15
+Wood Frog,81,C07,PreviouslyExposedSectionLine,10/13/14,10/16/14,3,2.16,345.6,39.4,5/6/15
+Wood Frog,87,C08,SectionLine,10/13/14,10/16/14,3,0.65,104,80.34,5/6/15
+Wood Frog,89,C09,SectionLine,10/13/14,10/20/14,7,1.1,176,25.41,5/13/15
+Wood Frog,90,C10,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Wood Frog,91,C11,PreviouslyExposedSectionLine,10/13/14,10/20/14,7,0.75,120,0,5/8/15
+Wood Frog,97,C12,PreviouslyExposedSectionLine,10/13/14,10/20/14,7,2.18,348.8,14.55,5/8/15
+Wood Frog,101,D01,SectionLine,10/13/14,10/20/14,7,5.14,822.4,26.67,5/13/15
+Wood Frog,104,D02,Control,10/13/14,10/16/14,3,0,0,,5/6/15
+Wood Frog,108,D03,Control,10/13/14,10/20/14,7,0,0,0,5/8/15
+Wood Frog,109,D04,Carter,10/20/14,10/30/14,10,0.97,155.2,0,5/17/15
+Wood Frog,126,D05,PreviouslyExposedSectionLine,10/13/14,10/16/14,3,1.8,288,,5/6/15
+Wood Frog,127,D06,PreviouslyExposedSectionLine,10/13/14,10/16/14,3,0.21,33.6,0,5/6/15
+Wood Frog,129,D07,SectionLine,10/13/14,10/23/14,10,28.46667,4554.6672,81.24,5/13/15
+Wood Frog,131,D08,SectionLine,10/13/14,10/20/14,7,19.9,3184,123.29,5/13/15
+Wood Frog,133,D09,Carter,10/20/14,10/27/14,7,4.51,721.6,,5/17/15
+Wood Frog,136,D10,PreviouslyExposedSectionLine,10/13/14,10/20/14,7,1.92,307.2,13.54,5/8/15
+Wood Frog,140,D11,Carter,10/20/14,10/23/14,3,1.093333,174.93328,3.23,5/14/15
+Wood Frog,141,D12,Carter,10/20/14,10/27/14,7,2.07,331.2,0,5/17/15
+Wood Frog,142,E01,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Wood Frog,144,E02,Control,10/13/14,10/20/14,7,0,0,0,5/8/15
+Wood Frog,147,E03,SectionLine,10/13/14,10/23/14,10,20.26333,3242.1328,32.44,5/13/15
+Wood Frog,148,E04,SectionLine,10/13/14,10/23/14,10,63.60333,10176.5328,89.81,5/14/15
+Bullfrog,4,E05,SectionLine,10/13/14,10/16/14,3,0.17,27.2,,5/6/15
+Bullfrog,9,E06,Carter,11/3/14,11/6/14,3,0.23,36.8,0,5/17/15
+Bullfrog,11,E07,Control,10/13/14,10/20/14,7,0,0,0,5/7/15
+Bullfrog,15,E08,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,23,E09,Control,10/13/14,10/16/14,3,0,0,,5/3/15
+Bullfrog,30,E10,Carter,11/3/14,11/6/14,3,0.82,131.2,0,5/17/15
+Bullfrog,36,E11,Carter,11/3/14,11/6/14,3,2.67,427.2,0,5/17/15
+Bullfrog,37,E12,SectionLine,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,43,F01,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,44,F02,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,45,F03,Control,10/13/14,10/16/14,3,0,0,,5/3/15
+Bullfrog,46,F04,SectionLine,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,47,F05,SectionLine,10/13/14,10/16/14,3,0.12,19.2,,5/7/15
+Bullfrog,48,F06,SectionLine,10/13/14,10/16/14,3,6.23,996.8,,5/7/15
+Bullfrog,53,F07,Control,10/13/14,10/20/14,7,0,0,0,5/7/15
+Bullfrog,60,F08,Carter,11/3/14,11/6/14,3,0.28,44.8,1.9,5/17/15
+Bullfrog,63,F09,SectionLine,10/13/14,10/23/14,10,0,0,,5/14/15
+Bullfrog,64,F10,SectionLine,10/13/14,10/23/14,10,0.076667,12.26672,0,5/14/15
+Bullfrog,68,F11,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,79,F12,SectionLine,10/13/14,10/20/14,7,0,0,0,5/13/15
+Bullfrog,81,G01,SectionLine,10/13/14,10/20/14,7,0,0,0,5/13/15
+Bullfrog,83,G02,Carter,11/3/14,11/6/14,3,7.05,1128,2.26,5/17/15
+Bullfrog,84,G03,SectionLine,10/13/14,10/20/14,7,0,0,0,5/13/15
+Bullfrog,85,G04,SectionLine,10/13/14,10/20/14,7,0,0,0,5/13/15
+Bullfrog,86,G05,Control,10/13/14,10/20/14,7,0,0,0,5/7/15
+Bullfrog,87,G06,Control,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,88,G07,SectionLine,10/13/14,10/16/14,3,1.88,300.8,,5/7/15
+Bullfrog,89,G08,SectionLine,10/13/14,10/16/14,3,4.96,793.6,,5/7/15
+Bullfrog,93,G09,SectionLine,10/13/14,10/23/14,10,0,0,0,5/14/15
+Bullfrog,96,G10,SectionLine,10/13/14,10/20/14,7,0.45,72,0,5/13/15
+Bullfrog,97,G11,Control,10/13/14,10/16/14,3,0,0,,5/7/15
+Bullfrog,101,G12,Control,10/13/14,10/20/14,7,0,0,0,5/7/15
+Bullfrog,102,H01,Control,10/13/14,10/16/14,3,0,0,,5/7/15
+Bullfrog,111,H02,Control,10/13/14,10/20/14,7,0,0,0,5/7/15
+Bullfrog,117,H03,Control,10/13/14,10/16/14,3,0,0,,5/7/15
+Bullfrog,59,,Untreated,,11/2/14,,0,0,0,
+Bullfrog,62,,SectionLine,10/13/14,10/24/14,,0,0,0,
+Bullfrog,73,,Control,10/13/14,11/4/14,,0,0,0,
+Wood Frog,11,,SectionLine,10/13/14,10/23/14,,34.33,5492.8,31.59,
+Wood Frog,22,,SectionLine,10/13/14,10/21/14,,38.69,6190.4,128.38,
+Wood Frog,33,,SectionLine,10/13/14,10/19/14,,7.06,1129.6,95.13,
+Wood Frog,35,,SectionLine,10/13/14,10/22/14,,18.31,2929.6,48.48,
+Wood Frog,37,,SectionLine,10/13/14,10/19/14,,16.45,2632,138.65,
+Wood Frog,38,,SectionLine,10/13/14,10/18/14,,1.22,195.2,227.15,
+Wood Frog,42,,SectionLine,10/13/14,10/19/14,,8.92,1427.2,128.36,
+Wood Frog,46,,PreviouslyExposedSectionLine,10/13/14,10/17/14,,10.09,1614.4,110.29,
+Wood Frog,49,,SectionLine,10/13/14,10/19/14,,16.29,2606.4,164.06,
+Wood Frog,60,,SectionLine,10/13/14,10/19/14,,17.3,2768,105.98,
+Wood Frog,64,,SectionLine,10/13/14,10/19/14,,9.62,1539.2,227.61,
+Wood Frog,68,,SectionLine,10/13/14,10/19/14,,19.48,3116.8,160.01,
+Wood Frog,102,,SectionLine,10/13/14,10/18/14,,5.04,806.4,92.64,
+Wood Frog,106,,SectionLine,10/13/14,10/18/14,,1.98,316.8,157.61,
+Wood Frog,107,,SectionLine,10/13/14,10/19/14,,5.08,812.8,143.46,
+Wood Frog,111,,SectionLine,10/13/14,10/23/14,,80.78,12924.8,127.08,
+Wood Frog,116,,SectionLine,10/13/14,10/20/14,,14.43,2308.8,151.36,
+Wood Frog,130,,SectionLine,10/13/14,10/19/14,,36.76,5881.6,197.35,
+Wood Frog,139,,SectionLine,10/13/14,10/19/14,,10.69,1710.4,155.82,
+Wood Frog,145,,SectionLine,10/13/14,10/30/14,,46.29,7406.4,57.32,

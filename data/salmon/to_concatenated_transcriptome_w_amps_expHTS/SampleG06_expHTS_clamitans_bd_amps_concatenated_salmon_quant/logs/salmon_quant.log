@@ -1,0 +1,32 @@
+[2016-08-14 14:20:47.025] [jointLog] [info] parsing read library format
+[2016-08-14 14:20:48.447] [jointLog] [info] Loading Quasi index
+[2016-08-14 14:21:08.099] [jointLog] [info] done
+[2016-08-14 14:24:02.745] [fileLog] [info] 
+At end of round 0
+==================
+Observed 7078698 total fragments (7078698 in most recent round)
+
+[2016-08-14 14:24:02.745] [jointLog] [info] Computed 278800 rich equivalence classes for further processing
+[2016-08-14 14:24:02.745] [jointLog] [info] Counted 5484559 total reads in the equivalence classes 
+[2016-08-14 14:24:02.748] [jointLog] [info] Mapping rate = 77.4798%
+
+[2016-08-14 14:24:02.748] [jointLog] [info] finished quantifyLibrary()
+[2016-08-14 14:24:02.748] [jointLog] [info] Starting optimizer
+[2016-08-14 14:24:02.827] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-08-14 14:24:02.850] [jointLog] [info] iteration = 0 | max rel diff. = 28.6573
+[2016-08-14 14:24:03.753] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-08-14 14:24:05.397] [jointLog] [info] iteration = 100 | max rel diff. = 0.154369
+[2016-08-14 14:24:07.217] [jointLog] [info] iteration = 200 | max rel diff. = 0.0861452
+[2016-08-14 14:24:09.042] [jointLog] [info] iteration = 300 | max rel diff. = 0.0500296
+[2016-08-14 14:24:10.144] [jointLog] [info] iteration = 361 | max rel diff. = 0.00955957
+[2016-08-14 14:24:10.146] [jointLog] [info] Finished optimizer
+[2016-08-14 14:24:10.146] [jointLog] [info] writing output 
+
+[2016-08-14 14:24:10.288] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleG06/SampleG06_R2.fastq )] :
+
+Detected a strand bias > 1% in an unstranded protocol check the file: SampleG06_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+
+[2016-08-14 14:24:10.288] [jointLog] [warning] NOTE: Read Lib [( Reads_Concat_1.fastq, 02-Cleaned/SampleG06/SampleG06_R2.fastq )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleG06_expHTS_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

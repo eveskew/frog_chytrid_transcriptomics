@@ -1,0 +1,38 @@
+[2016-07-23 06:31:22.940] [jointLog] [info] parsing read library format
+[2016-07-23 06:31:23.074] [jointLog] [info] Loading Quasi index
+[2016-07-23 06:31:27.541] [jointLog] [info] done
+[2016-07-23 06:46:50.081] [jointLog] [info] Computed 310463 rich equivalence classes for further processing
+[2016-07-23 06:46:50.081] [jointLog] [info] Counted 29800051 total reads in the equivalence classes 
+[2016-07-23 06:46:50.085] [jointLog] [info] Mapping rate = 76.0689%
+
+[2016-07-23 06:46:50.085] [jointLog] [info] finished quantifyLibrary()
+[2016-07-23 06:46:50.085] [jointLog] [info] Starting optimizer
+[2016-07-23 06:46:50.083] [fileLog] [info] 
+At end of round 0
+==================
+Observed 39175078 total fragments (39175078 in most recent round)
+
+[2016-07-23 06:46:50.179] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-07-23 06:46:50.214] [jointLog] [info] iteration = 0 | max rel diff. = 55.7974
+[2016-07-23 06:46:51.813] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-07-23 06:46:54.530] [jointLog] [info] iteration = 100 | max rel diff. = 0.247268
+[2016-07-23 06:46:57.405] [jointLog] [info] iteration = 200 | max rel diff. = 0.143957
+[2016-07-23 06:47:00.261] [jointLog] [info] iteration = 300 | max rel diff. = 0.11597
+[2016-07-23 06:47:03.142] [jointLog] [info] iteration = 400 | max rel diff. = 0.0501277
+[2016-07-23 06:47:05.968] [jointLog] [info] iteration 500, recomputing effective lengths
+[2016-07-23 06:47:07.185] [jointLog] [info] iteration = 500 | max rel diff. = 0.019489
+[2016-07-23 06:47:10.050] [jointLog] [info] iteration = 600 | max rel diff. = 0.04001
+[2016-07-23 06:47:12.905] [jointLog] [info] iteration = 700 | max rel diff. = 0.0250924
+[2016-07-23 06:47:15.767] [jointLog] [info] iteration = 800 | max rel diff. = 0.0112716
+[2016-07-23 06:47:15.993] [jointLog] [info] iteration = 809 | max rel diff. = 0.00983712
+[2016-07-23 06:47:15.999] [jointLog] [info] Finished optimizer
+[2016-07-23 06:47:15.999] [jointLog] [info] writing output 
+
+[2016-07-23 06:47:16.142] [jointLog] [warning] NOTE: Read Lib [( /dev/fd/63, /dev/fd/62 )] :
+
+Detected a strand bias > 1% in an unstranded protocol check the file: SampleD11_noadapt_hq15trim_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+
+[2016-07-23 06:47:16.142] [jointLog] [warning] NOTE: Read Lib [( /dev/fd/63, /dev/fd/62 )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleD11_noadapt_hq15trim_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

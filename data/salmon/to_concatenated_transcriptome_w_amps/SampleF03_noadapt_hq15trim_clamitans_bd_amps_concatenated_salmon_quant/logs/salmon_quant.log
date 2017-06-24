@@ -1,0 +1,32 @@
+[2016-07-23 12:37:45.376] [jointLog] [info] parsing read library format
+[2016-07-23 12:37:45.456] [jointLog] [info] Loading Quasi index
+[2016-07-23 12:37:48.629] [jointLog] [info] done
+[2016-07-23 12:57:15.550] [fileLog] [info] 
+At end of round 0
+==================
+Observed 66218942 total fragments (66218942 in most recent round)
+
+[2016-07-23 12:57:15.549] [jointLog] [info] Computed 183037 rich equivalence classes for further processing
+[2016-07-23 12:57:15.549] [jointLog] [info] Counted 54003092 total reads in the equivalence classes 
+[2016-07-23 12:57:15.552] [jointLog] [info] Mapping rate = 81.5523%
+
+[2016-07-23 12:57:15.552] [jointLog] [info] finished quantifyLibrary()
+[2016-07-23 12:57:15.552] [jointLog] [info] Starting optimizer
+[2016-07-23 12:57:15.614] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-07-23 12:57:15.636] [jointLog] [info] iteration = 0 | max rel diff. = 44.4134
+[2016-07-23 12:57:16.674] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-07-23 12:57:18.928] [jointLog] [info] iteration = 100 | max rel diff. = 0.197674
+[2016-07-23 12:57:21.036] [jointLog] [info] iteration = 200 | max rel diff. = 0.110119
+[2016-07-23 12:57:23.112] [jointLog] [info] iteration = 300 | max rel diff. = 0.0735817
+[2016-07-23 12:57:25.171] [jointLog] [info] iteration = 400 | max rel diff. = 0.0627192
+[2016-07-23 12:57:27.229] [jointLog] [info] iteration 500, recomputing effective lengths
+[2016-07-23 12:57:28.421] [jointLog] [info] iteration = 500 | max rel diff. = 0.0361392
+[2016-07-23 12:57:30.497] [jointLog] [info] iteration = 600 | max rel diff. = 0.0692044
+[2016-07-23 12:57:32.366] [jointLog] [info] iteration = 689 | max rel diff. = 0.00992607
+[2016-07-23 12:57:32.368] [jointLog] [info] Finished optimizer
+[2016-07-23 12:57:32.368] [jointLog] [info] writing output 
+
+[2016-07-23 12:57:32.508] [jointLog] [warning] NOTE: Read Lib [( /dev/fd/63, /dev/fd/62 )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleF03_noadapt_hq15trim_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

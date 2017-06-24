@@ -1,0 +1,33 @@
+[2016-07-22 23:37:42.169] [jointLog] [info] parsing read library format
+[2016-07-22 23:37:42.300] [jointLog] [info] Loading Quasi index
+[2016-07-22 23:37:46.257] [jointLog] [info] done
+[2016-07-22 23:51:54.137] [jointLog] [info] Computed 230959 rich equivalence classes for further processing
+[2016-07-22 23:51:54.137] [jointLog] [info] Counted 23985700 total reads in the equivalence classes 
+[2016-07-22 23:51:54.142] [jointLog] [info] Mapping rate = 73.0796%
+
+[2016-07-22 23:51:54.142] [jointLog] [info] finished quantifyLibrary()
+[2016-07-22 23:51:54.142] [jointLog] [info] Starting optimizer
+[2016-07-22 23:51:54.140] [fileLog] [info] 
+At end of round 0
+==================
+Observed 32821356 total fragments (32821356 in most recent round)
+
+[2016-07-22 23:51:54.239] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2016-07-22 23:51:54.271] [jointLog] [info] iteration = 0 | max rel diff. = 30.8744
+[2016-07-22 23:51:55.811] [jointLog] [info] iteration 50, recomputing effective lengths
+[2016-07-22 23:51:58.636] [jointLog] [info] iteration = 100 | max rel diff. = 0.202842
+[2016-07-22 23:52:01.781] [jointLog] [info] iteration = 200 | max rel diff. = 0.092582
+[2016-07-22 23:52:04.926] [jointLog] [info] iteration = 300 | max rel diff. = 0.0574762
+[2016-07-22 23:52:08.070] [jointLog] [info] iteration = 400 | max rel diff. = 0.0412089
+[2016-07-22 23:52:11.272] [jointLog] [info] iteration 500, recomputing effective lengths
+[2016-07-22 23:52:12.521] [jointLog] [info] iteration = 500 | max rel diff. = 0.0434093
+[2016-07-22 23:52:15.672] [jointLog] [info] iteration = 600 | max rel diff. = 0.0312882
+[2016-07-22 23:52:18.819] [jointLog] [info] iteration = 700 | max rel diff. = 0.0149124
+[2016-07-22 23:52:19.444] [jointLog] [info] iteration = 721 | max rel diff. = 0.00987267
+[2016-07-22 23:52:19.449] [jointLog] [info] Finished optimizer
+[2016-07-22 23:52:19.449] [jointLog] [info] writing output 
+
+[2016-07-22 23:52:19.595] [jointLog] [warning] NOTE: Read Lib [( /dev/fd/63, /dev/fd/62 )] :
+
+Greater than 5% of the alignments (but not, necessarily reads) disagreed with the provided library type; check the file: SampleC03_noadapt_hq15trim_clamitans_bd_amps_concatenated_salmon_quant/libFormatCounts.txt for details
+

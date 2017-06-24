@@ -1,0 +1,11 @@
+{
+    "salmon_version": "0.6.0",
+    "biasCorrect": [],
+    "extraSensitive": [],
+    "threads": "4",
+    "index": "../../ref_seqs/transcriptomes/clamitans_bd_amps_concatenated_transcriptome_salmon_index_21kmer",
+    "libType": "IU",
+    "mates1": "Reads_Concat_1.fastq",
+    "mates2": "02-Cleaned/SampleB08/SampleB08_R2.fastq",
+    "output": "SampleB08_expHTS_clamitans_bd_amps_concatenated_salmon_quant"
+}
