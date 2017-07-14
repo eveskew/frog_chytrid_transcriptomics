@@ -2,7 +2,7 @@
 
 # Histology Analyses
 
-# This script generates: Figure S5
+# This script generates: Figure 5
 
 #==============================================================================
 
@@ -74,7 +74,7 @@ d$Treatment <- factor(d$Treatment,
                                  "Untreated"))
 
 
-tiff("../figures/Figure_S5.tiff", width = 800, height = 700, res = 96)
+tiff("../figures/Figure_5.tiff", width = 800, height = 700, res = 96)
 
 filter(d) %>%
   ggplot(aes(x = AdjustedBdLoad, y = HistoScore)) +

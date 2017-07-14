@@ -2,7 +2,7 @@
 
 # Body Measurement Analyses
 
-# This script generates: Figures S2a, S2b
+# This script generates: Figures 2a, 2b
 
 #==============================================================================
 
@@ -310,7 +310,7 @@ wood_plot <- ggplot(data = d.wood, aes(x = DaysPost, y = Mass)) +
   scale_fill_manual(values = c("red", "darkgrey", "green")) +
   guides(fill = F)
 
-tiff("../figures/Figure_S2a.tiff", width = 1200, height = 600, res = 96)
+tiff("../figures/Figure_2a.tiff", width = 1200, height = 600, res = 96)
 
 grid.arrange(wood_plot, 
              top = textGrob(expression((italic(a))), 
@@ -336,7 +336,7 @@ bull_plot <- ggplot(data = d.bull, aes(x = DaysPost, y = Mass)) +
   scale_fill_manual(values = c("red", "darkgrey", "green")) +
   guides(fill = F)
 
-tiff("../figures/Figure_S2b.tiff", width = 1200, height = 600, res = 96)
+tiff("../figures/Figure_2b.tiff", width = 1200, height = 600, res = 96)
 
 grid.arrange(bull_plot, 
              top = textGrob(expression((italic(b))), 

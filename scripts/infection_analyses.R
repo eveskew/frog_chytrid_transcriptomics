@@ -2,7 +2,7 @@
 
 # Infection Prevalence and Load Analyses
 
-# This script generates: Figures S3a, S3b, S4a, S4b
+# This script generates: Figures 3a, 3b, 4a, 4b
 
 #==============================================================================
 
@@ -270,7 +270,7 @@ b.carter.prev.upper <- sapply(times.bcarter, function(z)
 
 # Infection prevalence plot for wood frogs
 
-tiff("../figures/Figure_S3a.tiff", width = 800, height = 600, res = 96)
+tiff("../figures/Figure_3a.tiff", width = 800, height = 600, res = 96)
 
 plot(w.control.prev ~ dayspost, xlim = c(0, 50), ylim = c(0,1), 
      bty = "l", xlab = "Days Post-Exposure", ylab = "Infection Prevalence", 
@@ -306,7 +306,7 @@ dev.off()
 
 # Infection prevalence plot for bullfrogs
 
-tiff("../figures/Figure_S3b.tiff", width = 800, height = 600, res = 96)
+tiff("../figures/Figure_3b.tiff", width = 800, height = 600, res = 96)
 
 plot(b.control.prev ~ dayspost, xlim = c(0, 50), ylim = c(0,1), 
      bty = "l", xlab = "Days Post-Exposure", ylab = "Infection Prevalence", 
@@ -367,7 +367,7 @@ legend(x = 35, y = 4,
 
 # Infection load plot for wood frogs (only positives)
 
-tiff("../figures/Figure_S4a.tiff", width = 800, height = 600, res = 96)
+tiff("../figures/Figure_4a.tiff", width = 800, height = 600, res = 96)
 
 plot(w.control.avg.pos ~ dayspost, xlim = c(0, 50), ylim = c(0,4), las = 1,
      bty = "l", cex.axis = 1.2, cex.lab = 1.4, type = "n",
@@ -419,7 +419,7 @@ legend(x = 35, y = 4, c("Control", "Section Line"),
 
 # Infection load plot for bullfrogs (only positives)
 
-tiff("../figures/Figure_S4b.tiff", width = 800, height = 600, res = 96)
+tiff("../figures/Figure_4b.tiff", width = 800, height = 600, res = 96)
 
 plot(b.control.avg.pos ~ dayspost, xlim = c(0, 50), ylim = c(0,4), las = 1,
      bty = "l", cex.axis = 1.2, cex.lab = 1.4, type = "n",

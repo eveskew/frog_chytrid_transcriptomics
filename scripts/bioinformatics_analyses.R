@@ -2,7 +2,7 @@
 
 # Bioinformatics Analyses
 
-# This script generates: Figures 1, 2a, 2b, 2c, 3, 4, S6, S7, S8
+# This script generates: Figures 6, 7, 8a, 8b, 8c, 9, 10, 11, 12
 
 #==============================================================================
 
@@ -317,9 +317,9 @@ legend("bottom", cex = 1.2,
        fill = c("green", "blue", "red", "orange"), bty = "n")
 
 
-# Create supplemental figure plot
+# Create figure
 
-tiff("../figures/Figure_S6.tiff", width = 1000, height = 1100, res = 96)
+tiff("../figures/Figure_6.tiff", width = 1000, height = 1100, res = 96)
 
 mat <- matrix(c(1, 1, 1, 2, 3, 4), 2, 3, byrow = TRUE)
 layout(mat, heights = c(2, 1))
@@ -1434,7 +1434,7 @@ lines(b.sec.de ~ dayspost, col= "red", lty = 1)
 # Plot comparing species responses to Bd exposure
 
 
-tiff("../figures/Figure_S8.tiff", width = 1000, height = 700, res = 96)
+tiff("../figures/Figure_12.tiff", width = 1000, height = 700, res = 96)
 
 par(mfrow = c(2, 3))
 
@@ -1614,7 +1614,7 @@ venn6 <- venn.diagram(list("SL" = genes_Bull_SecVCon_10), NULL,
 
 # Put Venn diagrams together on one plot
 
-tiff("../figures/Figure_1.tiff", width = 800, height = 700, res = 96)
+tiff("../figures/Figure_7.tiff", width = 800, height = 700, res = 96)
 
 grid.arrange(textGrob("Wood Frog\nDay 3", gp = gpar(cex = cex)),
              textGrob("Wood Frog\nDay 7", gp = gpar(cex = cex)),
@@ -1719,7 +1719,7 @@ length(genes_to_plot)
 
 # Plot heatmap.2
 
-tiff("../figures/Figure_S7.tiff", width = width, height = height)
+tiff("../figures/Figure_9.tiff", width = width, height = height)
 
 main <- 
   paste("\n\n\nContigs differentially expressed at any time point (n = ",
@@ -1755,7 +1755,7 @@ length(genes_to_plot)
 
 # Plot heatmap.2
 
-tiff("../figures/Figure_2a.tiff", width = width, height = height)
+tiff("../figures/Figure_8a.tiff", width = width, height = height)
 
 main <- 
   paste("\nA\n\nContigs differentially expressed at any time point (n = ",
@@ -1798,7 +1798,7 @@ length(genes_to_plot)
 
 # Plot heatmap.2
 
-tiff("../figures/Figure_2b.tiff", width = width, height = height)
+tiff("../figures/Figure_8b.tiff", width = width, height = height)
 
 main <- 
   paste("\nB\n\nContigs with a common response between species (n = ",
@@ -1841,7 +1841,7 @@ length(genes_to_plot)
 
 # Plot heatmap.2
 
-tiff("../figures/Figure_2c.tiff", width = width, height = height)
+tiff("../figures/Figure_8c.tiff", width = width, height = height)
 
 main <- 
   paste("\nC\n\nContigs with a different response between species (n = ",
@@ -1997,7 +1997,7 @@ gene.based.df$Species <- relevel(gene.based.df$Species, ref = "WoodFrog")
 label_list <- c("Bullfrog" = "American Bullfrog", "WoodFrog" = "Wood Frog")
 
 
-tiff("../figures/Figure_4.tiff", width = 800, height = 600, res = 96)
+tiff("../figures/Figure_11.tiff", width = 800, height = 600, res = 96)
 
 set.seed(8)
 
@@ -2100,7 +2100,7 @@ ggplot(aes(x = Treatment, y = Count, color = Treatment, shape = Day),
         plot.title = element_text(hjust = 0.5))
 
 
-tiff("../figures/Figure_3.tiff", width = 800, height = 1200, res = 96)
+tiff("../figures/Figure_10.tiff", width = 800, height = 1200, res = 96)
 
 plot_grid(plot1, plot2, nrow = 2, scale = 0.95)
 

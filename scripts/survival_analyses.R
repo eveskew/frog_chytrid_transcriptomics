@@ -2,7 +2,7 @@
 
 # Survival Analyses
 
-# This script generates: Figures S1a, S1b
+# This script generates: Figures 1a, 1b
 
 #==============================================================================
 
@@ -105,7 +105,7 @@ legend(x = "bottomleft",
 
 # Plot coded to show treatments sequentially
 
-tiff("../figures/Figure_S1a.tiff", width = 800, height = 600, res = 96)
+tiff("../figures/Figure_1a.tiff", width = 800, height = 600, res = 96)
 
 plot(mfitTreat_wood[2,], col = "green", lwd = 6, 
      cex.axis = 1.2, cex.lab = 1.4, las = 1, bty = "l", 
@@ -131,7 +131,7 @@ legend(x = "bottomleft",
 
 # Plot coded to show treatments sequentially
 
-tiff("../figures/Figure_S1b.tiff", width = 800, height = 600, res = 96)
+tiff("../figures/Figure_1b.tiff", width = 800, height = 600, res = 96)
 
 plot(mfitTreat_bull[2,], col = "green", lwd = 6, 
      cex.axis = 1.2, cex.lab = 1.4, las = 1, bty = "l", 
