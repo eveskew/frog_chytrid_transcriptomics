@@ -213,6 +213,44 @@ TukeyHSD(aov(BodyCondition ~ DaysPost, data = b.section))
 #==============================================================================
 
 
+# Find absolute and percentage difference in pre-exposure and day 46 body mass
+# for both host species
+
+
+# Control wood frog mean masses by time point
+
+w.control.mean.masses <- w.control %>%
+  group_by(DaysPost) %>%
+  summarize(mean_mass = mean(Mass))
+
+# Absolute mass change
+
+w.control.mean.masses$mean_mass[8] - w.control.mean.masses$mean_mass[1]
+
+# Relative mass change
+
+(w.control.mean.masses$mean_mass[8] - w.control.mean.masses$mean_mass[1])/
+  w.control.mean.masses$mean_mass[1] * 100
+
+
+# Control bullfrog mean masses by time point
+
+b.control.mean.masses <- b.control %>%
+  group_by(DaysPost) %>%
+  summarize(mean_mass = mean(Mass))
+
+# Absolute mass change
+
+b.control.mean.masses$mean_mass[8] - b.control.mean.masses$mean_mass[1]
+
+# Relative mass change
+
+(b.control.mean.masses$mean_mass[8] - b.control.mean.masses$mean_mass[1])/
+  b.control.mean.masses$mean_mass[1] * 100
+
+#==============================================================================
+
+
 # Fit linear mixed models within treatments to get at changes in Mass
 # over time. Can't fit a model with Carter Meadow bullfrogs since they only
 # have pre-treatment Mass data.

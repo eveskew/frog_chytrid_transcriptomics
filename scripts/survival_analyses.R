@@ -78,6 +78,25 @@ summary(mfitTreat_wood)
 survdiff(Surv(dwood$DaysSurviving, dwood$Status == 1) ~ dwood$Treatment)
 
 
+# Verify that control wood frog survival differs significantly from 
+# Section Line wood frog survival
+
+dwood.sub1 <- filter(dwood, Treatment %in% c("Control", "SectionLine"))
+
+survdiff(Surv(dwood.sub1$DaysSurviving, dwood.sub1$Status == 1) ~ 
+           dwood.sub1$Treatment)
+
+
+# Verify that control wood frog survival differs significantly from 
+# previously exposed Section Line wood frog survival
+
+dwood.sub2 <- 
+  filter(dwood, Treatment %in% c("Control", "PreviouslyExposedSectionLine"))
+
+survdiff(Surv(dwood.sub2$DaysSurviving, dwood.sub2$Status == 1) ~ 
+           dwood.sub2$Treatment)
+
+
 # Fit survival objects with differences by treatment for bullfrogs only
 
 mfitTreat_bull <- survfit(
@@ -107,15 +126,20 @@ legend(x = "bottomleft",
 
 tiff("../figures/Figure_1a.tiff", width = 800, height = 600, res = 96)
 
-plot(mfitTreat_wood[2,], col = "green", lwd = 6, 
+plot(mfitTreat_wood[2, ], col = "green", lwd = 6, 
      cex.axis = 1.2, cex.lab = 1.4, las = 1, bty = "l", 
      xlab = "Days Post-Exposure", ylab = "Survival", conf.int = T)
+
 legend(x = "bottomleft", 
        c("Control", "Carter Meadow", "Section Line", "PE Section Line"), 
        fill = c("green", "blue", "red", "orange"), bty = "n", cex = 1.2)
+
 lines(mfitTreat_wood[1, ], col = "blue", lwd = 6, conf.int = F)
+
 lines(mfitTreat_wood[4, ], col = "red", lwd = 6, conf.int = F)
+
 lines(mfitTreat_wood[3, ], col = "orange", lwd = 6, conf.int = F)
+
 mtext(expression((italic(a))), cex = 2)
 
 dev.off()
@@ -133,13 +157,17 @@ legend(x = "bottomleft",
 
 tiff("../figures/Figure_1b.tiff", width = 800, height = 600, res = 96)
 
-plot(mfitTreat_bull[2,], col = "green", lwd = 6, 
+plot(mfitTreat_bull[2, ], col = "green", lwd = 6, 
      cex.axis = 1.2, cex.lab = 1.4, las = 1, bty = "l", 
      xlab = "Days Post-Exposure", ylab = "Survival", conf.int = F) 
+
 legend(x = "bottomleft", c("Control", "Carter Meadow", "Section Line"), 
        fill = c("green", "blue", "red"), bty = "n", cex = 1.2)
-lines(mfitTreat_bull[1,], col = "blue", lwd = 6, conf.int = F)
-lines(mfitTreat_bull[3,], col = "red", lwd = 6, conf.int = F)
+
+lines(mfitTreat_bull[1, ], col = "blue", lwd = 6, conf.int = F)
+
+lines(mfitTreat_bull[3, ], col = "red", lwd = 6, conf.int = F)
+
 mtext(expression((italic(b))), cex = 2)
 
 dev.off()

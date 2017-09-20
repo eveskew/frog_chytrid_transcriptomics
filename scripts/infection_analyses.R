@@ -12,6 +12,7 @@
 library(dplyr)
 library(ggplot2)
 library(reshape)
+library(rethinking)
 
 #==============================================================================
 
@@ -184,6 +185,125 @@ b.section.avg.pos
 b.carter.avg.pos
 
 
+# Calculate lower and upper HPDI on zoospore load over time by treatment
+# (only positive samples)
+
+w.control.load.lower <- sapply(times, function(z) 
+  ifelse(sum(!is.na(w.control[w.control[, z] > 0, z])) > 1,
+         HPDI(w.control[w.control[, z] > 0, z], prob = 0.95)[1],
+         NA))
+w.section.load.lower <- sapply(times, function(z) 
+  ifelse(sum(!is.na(w.section[w.section[, z] > 0, z])) > 1,
+         HPDI(w.section[w.section[, z] > 0, z], prob = 0.95)[1],
+         NA))
+w.presection.load.lower <- sapply(times.wpresection, function(z) 
+  ifelse(sum(!is.na(w.presection[w.presection[, z] > 0, z])) > 1,
+         HPDI(w.presection[w.presection[, z] > 0, z], prob = 0.95)[1],
+         NA))
+w.carter.load.lower <- sapply(times.wcarter, function(z) 
+  ifelse(sum(!is.na(w.carter[w.carter[, z] > 0, z])) > 1,
+         HPDI(w.carter[w.carter[, z] > 0, z], prob = 0.95)[1],
+         NA))
+
+w.control.load.upper <- sapply(times, function(z) 
+  ifelse(sum(!is.na(w.control[w.control[, z] > 0, z])) > 1,
+         HPDI(w.control[w.control[, z] > 0, z], prob = 0.95)[2],
+         NA))
+w.section.load.upper <- sapply(times, function(z) 
+  ifelse(sum(!is.na(w.section[w.section[, z] > 0, z])) > 1,
+         HPDI(w.section[w.section[, z] > 0, z], prob = 0.95)[2],
+         NA))
+w.presection.load.upper <- sapply(times.wpresection, function(z) 
+  ifelse(sum(!is.na(w.presection[w.presection[, z] > 0, z])) > 1,
+         HPDI(w.presection[w.presection[, z] > 0, z], prob = 0.95)[2],
+         NA))
+w.carter.load.upper <- sapply(times.wcarter, function(z) 
+  ifelse(sum(!is.na(w.carter[w.carter[, z] > 0, z])) > 1,
+         HPDI(w.carter[w.carter[, z] > 0, z], prob = 0.95)[2],
+         NA))
+
+b.control.load.lower <- sapply(times, function(z) 
+  ifelse(sum(!is.na(b.control[b.control[, z] > 0, z])) > 1,
+         HPDI(b.control[b.control[, z] > 0, z], prob = 0.95)[1],
+         NA))
+b.section.load.lower <- sapply(times, function(z) 
+  ifelse(sum(!is.na(b.section[b.section[, z] > 0, z])) > 1,
+         HPDI(b.section[b.section[, z] > 0, z], prob = 0.95)[1],
+         NA))
+b.carter.load.lower <- sapply(times.bcarter, function(z) 
+  ifelse(sum(!is.na(b.carter[b.carter[, z] > 0, z])) > 1,
+         HPDI(b.carter[b.carter[, z] > 0, z], prob = 0.95)[1],
+         NA))
+
+b.control.load.upper <- sapply(times, function(z) 
+  ifelse(sum(!is.na(b.control[b.control[, z] > 0, z])) > 1,
+         HPDI(b.control[b.control[, z] > 0, z], prob = 0.95)[2],
+         NA))
+b.section.load.upper <- sapply(times, function(z) 
+  ifelse(sum(!is.na(b.section[b.section[, z] > 0, z])) > 1,
+         HPDI(b.section[b.section[, z] > 0, z], prob = 0.95)[2],
+         NA))
+b.carter.load.upper <- sapply(times.bcarter, function(z) 
+  ifelse(sum(!is.na(b.carter[b.carter[, z] > 0, z])) > 1,
+         HPDI(b.carter[b.carter[, z] > 0, z], prob = 0.95)[2],
+         NA))
+
+
+# Calculate min and max zoospore load over time by treatment
+# (only positive samples)
+
+# Note that when there are no positive samples then Inf values will
+# be returned for a given timepoint. But this is not a problem for plotting
+
+w.control.load.min <- sapply(times, function(z) 
+         min(w.control[w.control[, z] > 0, z], na.rm = T))
+w.section.load.min <- sapply(times, function(z) 
+         min(w.section[w.section[, z] > 0, z], na.rm = T))
+w.presection.load.min <- sapply(times.wpresection, function(z) 
+         min(w.presection[w.presection[, z] > 0, z], na.rm = T))
+w.carter.load.min <- sapply(times.wcarter, function(z) 
+         min(w.carter[w.carter[, z] > 0, z], na.rm = T))
+
+w.control.load.max <- sapply(times, function(z) 
+         max(w.control[w.control[, z] > 0, z], na.rm = T))
+w.section.load.max <- sapply(times, function(z) 
+         max(w.section[w.section[, z] > 0, z], na.rm = T))
+w.presection.load.max <- sapply(times.wpresection, function(z) 
+         max(w.presection[w.presection[, z] > 0, z], na.rm = T))
+w.carter.load.max <- sapply(times.wcarter, function(z) 
+         max(w.carter[w.carter[, z] > 0, z], na.rm = T))
+
+b.control.load.min <- sapply(times, function(z) 
+         min(b.control[b.control[, z] > 0, z], na.rm = T))
+b.section.load.min <- sapply(times, function(z) 
+         min(b.section[b.section[, z] > 0, z], na.rm = T))
+b.carter.load.min <- sapply(times.bcarter, function(z) 
+         min(b.carter[b.carter[, z] > 0, z], na.rm = T))
+
+b.control.load.max <- sapply(times, function(z) 
+         max(b.control[b.control[, z] > 0, z], na.rm = T))
+b.section.load.max <- sapply(times, function(z) 
+         max(b.section[b.section[, z] > 0, z], na.rm = T))
+b.carter.load.max <- sapply(times.bcarter, function(z) 
+         max(b.carter[b.carter[, z] > 0, z], na.rm = T))
+
+w.control.load.min
+w.section.load.min
+w.presection.load.min
+w.carter.load.min
+b.control.load.min
+b.section.load.min
+b.carter.load.min
+
+w.control.load.max
+w.section.load.max
+w.presection.load.max
+w.carter.load.max
+b.control.load.max
+b.section.load.max
+b.carter.load.max
+
+
 # Calculate infection prevalence over time by treatment
 
 w.control.prev <- sapply(times, function(z) 
@@ -272,29 +392,29 @@ b.carter.prev.upper <- sapply(times.bcarter, function(z)
 
 tiff("../figures/Figure_3a.tiff", width = 800, height = 600, res = 96)
 
-plot(w.control.prev ~ dayspost, xlim = c(0, 50), ylim = c(0,1), 
+plot(w.control.prev ~ dayspost, xlim = c(0, 50), ylim = c(0, 1), 
      bty = "l", xlab = "Days Post-Exposure", ylab = "Infection Prevalence", 
      cex.axis = 1.2, cex.lab = 1.4, las = 1, type = "n")
 
 points(w.control.prev ~ dayspost, col = "green", pch = 16, cex = 2)
 polygon.x <- c(dayspost, rev(dayspost))
 polygon.y <- c(w.control.prev.lower, rev(w.control.prev.upper))
-lines(w.control.prev ~ dayspost, col = "green", lty = 1)
+lines(w.control.prev ~ dayspost, col = alpha("green", 0.3), lty = 1)
 
 points(w.carter.prev ~ dayspost, col = "blue", pch = 16, cex = 2)
 polygon.x <- c(dayspost, rev(dayspost))
 polygon.y <- c(w.carter.prev.lower, rev(w.carter.prev.upper))
-lines(w.carter.prev ~ dayspost, col = "blue", lty = 1)
+lines(w.carter.prev ~ dayspost, col = alpha("blue", 0.3), lty = 1)
 
-points(w.section.prev ~ dayspost, col= "red", pch = 16, cex = 2)
+points(w.section.prev ~ dayspost, col = "red", pch = 16, cex = 2)
 polygon.x <- c(dayspost, rev(dayspost))
 polygon.y <- c(w.section.prev.lower, rev(w.section.prev.upper))
-lines(w.section.prev ~ dayspost, col = "red", lty = 1)
+lines(w.section.prev ~ dayspost, col = alpha("red", 0.3), lty = 1)
 
 points(w.presection.prev ~ dayspost[1:length(w.presection.prev)], 
-       col= "orange", pch = 16, cex = 2)
+       col = "orange", pch = 16, cex = 2)
 lines(w.presection.prev ~ dayspost[1:length(w.presection.prev)],
-      col = "orange", lty = 1)
+      col = alpha("orange", 0.3), lty = 1)
 
 mtext(expression((italic(a))), cex = 2)
 legend(x = 0, y = 0.35, 
@@ -308,24 +428,24 @@ dev.off()
 
 tiff("../figures/Figure_3b.tiff", width = 800, height = 600, res = 96)
 
-plot(b.control.prev ~ dayspost, xlim = c(0, 50), ylim = c(0,1), 
+plot(b.control.prev ~ dayspost, xlim = c(0, 50), ylim = c(0, 1), 
      bty = "l", xlab = "Days Post-Exposure", ylab = "Infection Prevalence", 
      cex.axis = 1.2, cex.lab = 1.4, las = 1, type = "n")
 
 points(b.control.prev ~ dayspost, col = "green", pch = 16, cex = 2)
 polygon.x <- c(dayspost, rev(dayspost))
 polygon.y <- c(b.control.prev.lower, rev(b.control.prev.upper))
-lines(b.control.prev ~ dayspost, col = "green", lty = 1)
+lines(b.control.prev ~ dayspost, col = alpha("green", 0.3), lty = 1)
 
 points(b.carter.prev ~ dayspost[1:length(b.carter.prev)], 
        col = "blue", pch = 16, cex = 2)
 lines(b.carter.prev ~ dayspost[1:length(b.carter.prev)], 
-       col = "blue", lty = 1)
+       col = alpha("blue", 0.3), lty = 1)
 
-points(b.section.prev ~ dayspost, col= "red", pch = 16, cex = 2)
+points(b.section.prev ~ dayspost, col = "red", pch = 16, cex = 2)
 polygon.x <- c(dayspost, rev(dayspost))
 polygon.y <- c(b.section.prev.lower, rev(b.section.prev.upper))
-lines(b.section.prev ~ dayspost, col= "red", lty = 1)
+lines(b.section.prev ~ dayspost, col = alpha("red", 0.3), lty = 1)
 
 mtext(expression((italic(b))), cex = 2)
 legend(x = 35, y = 1, c("Control", "Section Line"), 
@@ -369,26 +489,42 @@ legend(x = 35, y = 4,
 
 tiff("../figures/Figure_4a.tiff", width = 800, height = 600, res = 96)
 
-plot(w.control.avg.pos ~ dayspost, xlim = c(0, 50), ylim = c(0,4), las = 1,
+plot(w.control.avg.pos ~ dayspost, xlim = c(0, 50), ylim = c(0, 6), las = 1,
      bty = "l", cex.axis = 1.2, cex.lab = 1.4, type = "n",
      xlab = "Days Post-Exposure", ylab= "Log(Zoospore Equivalents + 1)")
 
 points(w.control.avg.pos ~ dayspost, col = "green", pch = 16, cex = 2)
-lines(w.control.avg.pos ~ dayspost, col = "green", lty = 1)
+points(w.control.load.min ~ dayspost, 
+       col = alpha("green", 0.8), pch = 16, cex = 1)
+points(w.control.load.max ~ dayspost, 
+       col = alpha("green", 0.8), pch = 16, cex = 1)
+lines(w.control.avg.pos ~ dayspost, col = alpha("green", 0.3), lty = 1)
 
 points(w.carter.avg.pos ~ dayspost, col = "blue", pch = 16, cex = 2)
-lines(w.carter.avg.pos ~ dayspost, col = "blue", lty = 1)
+points(w.carter.load.min ~ dayspost, 
+       col = alpha("blue", 0.8), pch = 16, cex = 1)
+points(w.carter.load.max ~ dayspost, 
+       col = alpha("blue", 0.8), pch = 16, cex = 1)
+lines(w.carter.avg.pos ~ dayspost, col = alpha("blue", 0.3), lty = 1)
 
-points(w.section.avg.pos ~ dayspost, col= "red", pch = 16, cex = 2)
-lines(w.section.avg.pos ~ dayspost, col= "red", lty = 1)
+points(w.section.avg.pos ~ dayspost, col = "red", pch = 16, cex = 2)
+points(w.section.load.min ~ dayspost, 
+       col = alpha("red", 0.8), pch = 16, cex = 1)
+points(w.section.load.max ~ dayspost, 
+       col = alpha("red", 0.8), pch = 16, cex = 1)
+lines(w.section.avg.pos ~ dayspost, col = alpha("red", 0.3), lty = 1)
 
 points(w.presection.avg.pos ~ dayspost[1:length(w.presection.avg.pos)],
        col = "orange", pch = 16, cex = 2)
+points(w.presection.load.min ~ dayspost[1:length(w.presection.load.min)],
+       col = alpha("orange", 0.8), pch = 16, cex = 1)
+points(w.presection.load.max ~ dayspost[1:length(w.presection.load.max)],
+       col = alpha("orange", 0.8), pch = 16, cex = 1)
 lines(w.presection.avg.pos ~ dayspost[1:length(w.presection.avg.pos)], 
-      col = "orange", lty = 1)
+      col = alpha("orange", 0.3), lty = 1)
 
 mtext(expression((italic(a))), cex = 2)
-legend(x = 35, y = 4, 
+legend(x = 35, y = 6, 
        c("Control", "Carter Meadow", "Section Line", "PE Section Line"), 
        fill = c("green", "blue", "red", "orange"), bty = "n", cex = 1.4)
 
@@ -409,7 +545,7 @@ points(b.carter.avg ~ dayspost[1:length(b.carter.avg)],
 lines(b.carter.avg ~ dayspost[1:length(b.carter.avg)], 
        col = "blue", lty = 1)
 
-points(b.section.avg ~ dayspost, col= "red", pch = 16, cex = 2)
+points(b.section.avg ~ dayspost, col = "red", pch = 16, cex = 2)
 lines(b.section.avg ~ dayspost, col = "red", lty = 1)
 
 mtext(expression((italic(b))), cex = 2)
@@ -421,23 +557,31 @@ legend(x = 35, y = 4, c("Control", "Section Line"),
 
 tiff("../figures/Figure_4b.tiff", width = 800, height = 600, res = 96)
 
-plot(b.control.avg.pos ~ dayspost, xlim = c(0, 50), ylim = c(0,4), las = 1,
+plot(b.control.avg.pos ~ dayspost, xlim = c(0, 50), ylim = c(0, 6), las = 1,
      bty = "l", cex.axis = 1.2, cex.lab = 1.4, type = "n",
      xlab = "Days Post-Exposure", ylab= "Log(Zoospore Equivalents + 1)")
 
 points(b.control.avg.pos ~ dayspost, col = "green", pch = 16, cex = 2)
-lines(b.control.avg.pos ~ dayspost, col = "green", lty = 1)
+points(b.control.load.min ~ dayspost, 
+       col = alpha("green", 0.8), pch = 16, cex = 1)
+points(b.control.load.max ~ dayspost, 
+       col = alpha("green", 0.8), pch = 16, cex = 1)
+lines(b.control.avg.pos ~ dayspost, col = alpha("green", 0.3), lty = 1)
 
 points(b.carter.avg.pos ~ dayspost[1:length(b.carter.avg.pos)], 
        col = "blue", pch = 16, cex = 2)
 lines(b.carter.avg.pos ~ dayspost[1:length(b.carter.avg.pos)], 
-      col = "blue", lty = 1)
+      col = alpha("blue", 0.3), lty = 1)
 
-points(b.section.avg.pos ~ dayspost, col= "red", pch = 16, cex = 2)
-lines(b.section.avg.pos ~ dayspost, col= "red", lty = 1)
+points(b.section.avg.pos ~ dayspost, col = "red", pch = 16, cex = 2)
+points(b.section.load.min ~ dayspost, 
+       col = alpha("red", 0.8), pch = 16, cex = 1)
+points(b.section.load.max ~ dayspost, 
+       col = alpha("red", 0.8), pch = 16, cex = 1)
+lines(b.section.avg.pos ~ dayspost, col = alpha("red", 0.3), lty = 1)
 
 mtext(expression((italic(b))), cex = 2)
-legend(x = 35, y = 4, c("Control", "Section Line"), 
+legend(x = 35, y = 6, c("Control", "Section Line"), 
        fill = c("green", "red"), bty = "n", cex = 1.4)
 
 dev.off()

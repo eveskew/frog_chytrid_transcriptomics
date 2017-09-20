@@ -25,6 +25,11 @@ d <- read.csv("../data/histology_data.csv")
 d <- filter(d, !is.na(HistoScore))
 nrow(d)
 
+# Round histology scores to reflect the precision of original field-by-field
+# quantifications
+
+d$HistoScore <- round(d$HistoScore)
+
 # How many samples with histology come from sacrificed animals?
 
 d %>%
@@ -45,6 +50,10 @@ group_by(d, Species, Treatment) %>%
             Avg = mean(HistoScore, na.rm = T),
             Min = min(HistoScore, na.rm = T),
             Max = max(HistoScore, na.rm = T))
+
+# What is the correlation coefficient between qPCR loads and histology scores?
+
+cor(d$AdjustedBdLoad, d$HistoScore)
 
 # Look only at records that had a histology score of 0
 # How many qPCR records also report 0 vs. > 0?
