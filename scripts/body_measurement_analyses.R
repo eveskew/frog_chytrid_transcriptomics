@@ -335,8 +335,20 @@ treatment_names <- c("Control" = "Control", "Carter" = "Carter Meadow",
 
 set.seed(8)
 
+x_pos <- c(rep(levels(d.wood$DaysPost), 3), "Pre", "4")
+y_pos <- rep(3, length(x_pos))
+lab <- group_by(d.wood, Treatment, DaysPost) %>% 
+  summarize(n()) %>% 
+  ungroup() %>%
+  select(3) %>% 
+  unlist(use.names = F) %>%
+  as.character()
+Treatment <- c(rep("Control", 8), rep("Carter", 8),
+               rep("SectionLine", 8), rep("PreviouslyExposedSectionLine", 2))
+label_data <- data.frame(x_pos, y_pos, lab, Treatment)
+
 wood_plot <- ggplot(data = d.wood, aes(x = DaysPost, y = Mass)) +
-  xlab("Days Post-Exposure") + ylab("Mass (g)") + ylim(0, 3) +
+  xlab("Days Post-Exposure") + ylab("Mass (g)") + ylim(0, 3.2) +
   geom_violin(aes(fill = Direction)) +
   geom_jitter(width = 0.1, size = 0.8) +
   facet_wrap(~Treatment, nrow = 1, labeller = as_labeller(treatment_names)) +
@@ -346,8 +358,14 @@ wood_plot <- ggplot(data = d.wood, aes(x = DaysPost, y = Mass)) +
         axis.title = element_text(size = 28, face = "bold"),
         strip.text.x = element_text(size = 20, face = "bold")) +
   scale_fill_manual(values = c("red", "darkgrey", "green")) +
+  geom_label(data = label_data,
+             aes(x = x_pos, y = y_pos, label = lab, size = 1),
+             show.legend = FALSE, fill = "white", color = "white") +
+  geom_text(data = label_data, 
+            aes(x = x_pos, y = y_pos, label = lab, size = 1),
+            show.legend = FALSE) +
   guides(fill = F)
-
+  
 tiff("../figures/Figure_2a.tiff", width = 1200, height = 600, res = 96)
 
 grid.arrange(wood_plot, 
@@ -361,8 +379,19 @@ dev.off()
 
 set.seed(8)
 
+x_pos <- c(levels(d.bull$DaysPost), "Pre", levels(d.bull$DaysPost))
+y_pos <- rep(22.5, length(x_pos))
+lab <- group_by(d.bull, Treatment, DaysPost) %>% 
+  summarize(n()) %>% 
+  ungroup() %>%
+  select(3) %>% 
+  unlist(use.names = F) %>%
+  as.character()
+Treatment <- c(rep("Control", 8), "Carter", rep("SectionLine", 8))
+label_data <- data.frame(x_pos, y_pos, lab, Treatment)
+
 bull_plot <- ggplot(data = d.bull, aes(x = DaysPost, y = Mass)) +
-  xlab("Days Post-Exposure") + ylab("Mass (g)") + ylim(0, 20) +
+  xlab("Days Post-Exposure") + ylab("Mass (g)") + ylim(0, 25) +
   geom_violin(aes(fill = Direction)) +
   geom_jitter(width = 0.1, size = 0.8) +
   facet_wrap(~Treatment, nrow = 1, labeller = as_labeller(treatment_names)) +
@@ -372,6 +401,12 @@ bull_plot <- ggplot(data = d.bull, aes(x = DaysPost, y = Mass)) +
         axis.title = element_text(size = 28, face = "bold"),
         strip.text.x = element_text(size = 20, face = "bold")) +
   scale_fill_manual(values = c("red", "darkgrey", "green")) +
+  geom_label(data = label_data,
+             aes(x = x_pos, y = y_pos, label = lab, size = 1),
+             show.legend = FALSE, fill = "white", color = "white") +
+  geom_text(data = label_data, 
+            aes(x = x_pos, y = y_pos, label = lab, size = 1),
+            show.legend = FALSE) +
   guides(fill = F)
 
 tiff("../figures/Figure_2b.tiff", width = 1200, height = 600, res = 96)

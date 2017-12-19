@@ -47,6 +47,7 @@ d %>%
 
 group_by(d, Species, Treatment) %>%
   summarize(SampleSize = n(),
+            n_Pos = sum(HistoScore > 0),
             Avg = mean(HistoScore, na.rm = T),
             Min = min(HistoScore, na.rm = T),
             Max = max(HistoScore, na.rm = T))
@@ -68,6 +69,27 @@ filter(d, HistoScore == 0) %>%
 filter(d, AdjustedBdLoad == 0) %>%
   summarize(NumTotal = n(), NumMatching = sum(HistoScore == 0),
             NumNotMatching = sum(HistoScore > 0))
+
+# Look only at records of Bd-exposed wood frogs with qPCR > 0
+# How many had Histology records < 0? Could indicate false positive by qPCR
+
+d %>%
+  filter(Species == "Wood Frog") %>%
+  filter(Treatment != "Control") %>%
+  filter(AdjustedBdLoad > 0) %>%
+  summarize(NumPCRPos = n(), NumHistoNeg = sum(HistoScore == 0), 
+            Prop = NumHistoNeg/NumPCRPos)
+
+# Look only at records of Bd-exposed American bullfrogs with qPCR > 0
+# How many had Histology records < 0? Could indicate false positive by qPCR
+
+d %>%
+  filter(Species == "Bullfrog") %>%
+  filter(Treatment != "Control") %>%
+  filter(Treatment != "Untreated") %>%
+  filter(AdjustedBdLoad > 0) %>%
+  summarize(NumPCRPos = n(), NumHistoNeg = sum(HistoScore == 0), 
+            Prop = NumHistoNeg/NumPCRPos)
 
 #==============================================================================
 
